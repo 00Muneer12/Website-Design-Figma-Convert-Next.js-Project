@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Input } from "postcss";
-import React from "react";
 import { FaCartArrowDown } from "react-icons/fa6";
 
 const Navbar = () => {
