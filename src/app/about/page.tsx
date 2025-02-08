@@ -1,95 +1,30 @@
 import Image from "next/image";
 import React from "react";
 
-const page = () => {
+const AboutMe = () => {
   return (
-    <section className="bg-gray-800">
-      <div className="flex grid grid-cols-2 gap-4 text-center">
-        <div>
-          <h2 className="text-[60px] ml-3 text-orange-600 font-bold  p-5 pt-10">
-            About Us
-          </h2>
-        </div>
-        <div className="text-[40px]">
-          <h2 className="text-[25px] ml-3 text-gray-400 font-bold p-3 pt-9">
-            Our Physical Branchs
-          </h2>
-          <p className="text-[15px] ml-3 text-gray-400 p-2">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
-            obcaecati sequi adipisci.
-          </p>
-        </div>
+    <section className="bg-gray-800 pb-10 flex flex-col items-center text-center py-12 p-6">
+      <h2 className="text-[60px] text-orange-600 font-bold mb-5">About Muneer Watches</h2>
+
+      {/* Profile Image */}
+      <div className="relative w-40 h-40 mb-4">
+        <Image
+          className="rounded-full border-4 border-orange-600 p-2 shadow-lg"
+          src={"/pic1.jpg"} // Replace with your actual image path
+          width={160}
+          height={160}
+          alt="Profile Image"
+        />
       </div>
 
-{/* Profiles ............................................................................ */}
-      <div className="flex justify-around">
-      <div className="flex">
-        <div>
-          <Image
-            className="rounded-full"
-            src={"/man.jpeg"}
-            width={50}
-            height={200}
-            alt=""
-          />
-        </div>
-        <div className="m-4">
-          <h3 className="text-gray-400">Jai dev</h3>
-          <p className="text-yellow-500 text-[20px]">* * * *</p>
-        </div>
+      {/* Bio Section */}
+      <div className="max-w-lg">
+        <p className="text-[18px] text-gray-400 leading-relaxed">
+      we bring you a collection of dynamic, stylish, and high-quality watches designed for every occasion. Our timepieces blend the latest trends with timeless elegance, ensuring you always stay ahead in style. Crafted with precision and durability, our watches are more than accessories. Whether you seek sophistication, innovation, or reliability, we have the perfect watch for you. Experience excellence with our exclusive collection today!
+        </p>
       </div>
-
-      {/* profil-2 */}
-
-      <div className="flex">
-        <div>
-          <Image
-            className="rounded-full"
-            src={"/girl.jpeg"}
-            width={50}
-            height={200}
-            alt=""
-          />
-        </div>
-        <div className="m-4">
-          <h3 className="text-gray-400">julia</h3>
-          <p className="text-yellow-500 text-[20px]">* * * *</p>
-        </div>
-      </div>
-
-      {/* profile-3 */}
-
-      <div className="flex">
-        <div>
-          <Image
-            className="rounded-full"
-            src={"/man 2.jpeg"}
-            width={50}
-            height={200}
-            alt=""
-          />
-        </div>
-        <div className="m-4">
-          <h3 className="text-gray-400">Ghansham</h3>
-          <p className="text-yellow-500 text-[20px]">* * * *</p>
-        </div>
-      </div>
-
-      </div>
-
-      <Image className="rounded-2xl"
-      src={'/map.jpeg'}
-      width={400}
-      height={100}
-      alt=""/>
-{/* .................................................................................... */}
-      <div className="text-left text-green-600 p-2 ">
-        <h4>& Locations</h4>
-        Tando Allahyar/Nasirpur Road
-      </div>
-      {/* <button className='bg-orange-600 p-3 rounded-xl mx-[20px] mb-4 mt-4 text-gray-200 '> <Link className='' href={''}>Contact Us</Link> </button> */}
     </section>
   );
 };
 
-export default page;
+export default AboutMe;

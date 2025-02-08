@@ -1,42 +1,54 @@
-import Image from "next/image";
 import Link from "next/link";
-import { FaCartArrowDown } from "react-icons/fa6";
+import Image from "next/image";
+import React from "react";
 
 const Navbar = () => {
   return (
-    <section className="flex bg-cyan-800 justify-between ">
-      <Image
-        className="ml-[-10px] w-[250px] xl:w-[400px] 2xl:w-[500px] "
-        src={"/Furnite.png"}
-        width={300}
-        height={200}
-        alt=""
-      />
-      <div className="invisible md:visible ">
-        <input
-          className="text-[12px] text-center m-[15px] ml-[-10px] rounded-full h-7 mt-9 ml-[-50px] lg:w-[300px] lg:h-9 2xl:text-[30px] 2xl:py-7  "
-          required
-          type="text"
-        />
-        <button className="bg-white rounded-full p-1 ml-[-14px] 2xl:text-[20px]">
-          search
-        </button>
-      </div>
+    <nav className="bg-gray-800 py-2 px-4 shadow-md fixed top-0 w-full z-50">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        
+        {/* Logo */}
+        <div className="flex items-center">
+          <Image
+            src="/logo2.jpg"
+            width={50}
+            height={50}
+            alt="Logo"
+            className="w-[40px] h-[40px] rounded-full"
+          />
+          <h1 className="text-white text-lg font-bold ml-2">Muneer Watches</h1>
+        </div>
 
-      <nav className="flex text-[10px]  items-center mr-7  lg:text-[15px] xl:text-[20px] 2xl:text-[30px] 2xl:p-2 ">
-        <ul className=" text-gray-100 font-bold grid gap-y-2  md:grid md:gap-x-6 md:gap-y-4 md:grid-cols-4   ">
-          <Link href={"/"} className="hover:text-gray-300">Home</Link>
-          <Link href={"/products"} className="hover:text-gray-300">Product</Link>
-          <Link href={"/about"} className="hover:text-gray-300">About</Link>
-          <Link href={"/contact"} className="hover:text-gray-300">Contact</Link>
+        {/* Navigation Links */}
+        <ul className="hidden md:flex space-x-6">
+          <li>
+            <Link href="/" className="text-gray-300 hover:text-orange-400 transition">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link href="/products" className="text-gray-300 hover:text-orange-400 transition">
+              Products
+            </Link>
+          </li>
+          <li>
+            <Link href="/about" className="text-gray-300 hover:text-orange-400 transition">
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact" className="text-gray-300 hover:text-orange-400 transition">
+              Contact
+            </Link>
+          </li>
         </ul>
-      </nav>
 
-      <Link className="m-2 text-gray-300 mt-9 xl:text-[30px]" href={""}>
-        {" "}
-        <FaCartArrowDown />{" "}
-      </Link>
-    </section>
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button className="text-gray-300 text-2xl">☰</button>
+        </div>
+      </div>
+    </nav>
   );
 };
 

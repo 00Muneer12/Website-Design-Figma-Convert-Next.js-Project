@@ -1,42 +1,48 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className='flex justify-around p-5 text-gray-300 bg-gray-700'>
-        <div className=' lg:text-[20px]'>
-            <h2 className='text-orange-600 font-bold'>Conditions</h2>
-            <Link href={''}><p>Term & Servises</p></Link>
-            <Link href={''}><p>Policies</p></Link>
-            <Link href={''}><p>Refunde Police</p></Link>
-            <Link href={''}><p>Delivery</p></Link>
+    <footer className="bg-gray-800 text-white py-2 px-4 text-xs">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        
+        {/* Conditions Section
+        <div className="flex flex-col space-y-0.5">
+          <h2 className="text-orange-500 font-semibold"></h2>
+          <Link href={''} className="hover:text-orange-400 transition"></Link>
+          <Link href={''} className="hover:text-orange-400 transition"></Link>
         </div>
 
+        DivideR
+        <div className="hidden md:block bg-white w-[1px] h-6"></div> */}
 
-        <div className='bg-white w-1 rounded-2xl'></div>
-          
+        {/* Discount Winners Section
+        <div className="flex flex-col space-y-0.5">
+          <h2 className="text-orange-500 font-semibold"></h2>
+          <Link href={''} className="hover:text-orange-400 transition"></Link>
+          <Link href={''} className="hover:text-orange-400 transition"></Link>
+        </div> */}
 
-
-
-        <div className='pl-2 lg:text-[20px]'>
-            <h2 className='text-orange-600 font-bold '>Discount Winners</h2>
-            <Link href={''}><p>100+ products /month</p></Link>
-            <Link href={''}><p>New Customer</p></Link>
-            <Link href={''}><p>Old Customer</p></Link>
-            <Link href={''}><p>From Us</p></Link>
-            
+        {/* Logo Section */}
+        <div className=" mt-2 flex">
+          <Image
+            className="w-[30px] h-[30px] rounded-full"
+            src={'/logo2.jpg'}
+            width={30}
+            height={30}
+            alt="Logo"
+             />
+             {/* Footer Bottom Text */}
+      <div className=" mt-2 px-2 text-center text-white text-[10px]">
+        <p>MUNEER  WATCHES  &copy; {new Date().getFullYear()}  ALL  RIGHTS  RESERVED</p>
+      </div>
         </div>
-        <div>
-            <Image className='lg:w-[350px]'
-            src={'/Furnite.png'}
-            width={200}
-            height={200}
-            alt=''
-            />
-        </div>
+      </div>
+
+      
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

@@ -1,27 +1,55 @@
-import React from 'react'
+import React from "react";
 
 const page = () => {
   return (
-    <form className='bg-gray-700  '>
-      <h2 className="text-[30px] ml-3 text-orange-600 font-bold text-center p-5 md:text-[40px]">Contact Us</h2>
-        <div className='border rounded mx-2 font-bold grid p-5 bg-gray-600 bg-transparent md:p-9 md:mx-4 lg:w-[70%] lg:ml-[14%] '>
-          <label className='text-gray-100 font-bold'>Your Name</label>
-          <input className='text-center h-[40px] rounded bg-gray-100' type="text" required />
-          <label className='text-gray-100 font-bold'>Email Address</label>
-          <input className='text-center h-[40px] rounded bg-gray-100' type="email" required />
-          <label className='text-gray-100 font-bold'>Your Message</label>
-          <textarea className='pl-2 bg-gray-100' rows={5} required></textarea>
+    <form className="bg-gradient-to-r from-gray-800 via-gray-900 to-black py-16 px-4">
+      <h2 className="text-2xl text-center text-orange-600 font-bold mb-4">Contact Us</h2>
 
-         <button type='submit' className='bg-orange-500 py-3 rounded text-gray-200 mt-3'> Send Message </button>
+      <div className="max-w-md mx-auto bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700">
+        <div className="mb-4">
+          <label className="text-gray-300 text-sm font-medium">Your Name</label>
+          <input
+            className="w-full py-2 px-3 text-gray-800 rounded bg-gray-200 focus:ring-2 focus:ring-orange-500 focus:outline-none"
+            type="text"
+            placeholder="Enter your name"
+            required
+          />
         </div>
 
-        <div className='text-gray-400 p-5 bg-gray-600 rounded mx-3 mt-5'>
-         <h3> Phone#: 03473239151</h3>
-          <h3>Gmail: abc@gmail.com</h3>
+        <div className="mb-4">
+          <label className="text-gray-300 text-sm font-medium">Email Address</label>
+          <input
+            className="w-full py-2 px-3 text-gray-800 rounded bg-gray-200 focus:ring-2 focus:ring-orange-500 focus:outline-none"
+            type="email"
+            placeholder="Enter your email"
+            required
+          />
         </div>
 
+        <div className="mb-4">
+          <label className="text-gray-300 text-sm font-medium">Your Message</label>
+          <textarea
+            className="w-full py-2 px-3 text-gray-800 rounded bg-gray-200 focus:ring-2 focus:ring-orange-500 focus:outline-none"
+            rows={3}
+            placeholder="Write your message"
+            required
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          className="w-full py-2 text-sm font-semibold text-white bg-orange-600 rounded hover:bg-orange-700 transition-all"
+        >
+          Send Message
+        </button>
+      </div>
+
+      <div className="mt-6 text-center text-gray-400 text-sm">
+        <p>Phone #: 03473239151</p>
+        <p>Gmail: abc@gmail.com</p>
+      </div>
     </form>
-  )
-}
+  );
+};
 
-export default page
+export default page;
